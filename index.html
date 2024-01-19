@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер валют</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Курс к тенге на текущий момент:</h1>
+        <div class="exchange-rates">
+            <p>USD: <span id="usdRate">загрузка...</span></p>
+            <p>EUR: <span id="eurRate">загрузка...</span></p>
+            <p>RUB: <span id="rubRate">загрузка...</span></p>
+            <p>TRY: <span id="tryRate">загрузка...</span></p>
+            <p>CNY: <span id="cnyRate">загрузка...</span></p>
+        </div>
+
+        <h1>Конвертер валют:</h1>
+        <div class="conversion-block">
+            <input type="number" id="amountInput" placeholder="Введите сумму">
+            
+            <select id="fromCurrency">
+                <option value="KZT">Тенге (KZT)</option>
+                <option value="RUB">Рубли (RUB)</option>
+                <option value="USD">Доллар США (USD)</option>
+                <option value="EUR">Евро (EUR)</option>
+                <option value="CNY">Юань (CNY)</option>
+            </select>
+            
+            <select id="toCurrency">
+                <option value="USD">Доллар США (USD)</option>
+                <option value="EUR">Евро (EUR)</option>
+                <option value="CNY">Юань (CNY)</option>
+                <option value="RUB">Рубли (RUB)</option>
+                <option value="KZT">Тенге (KZT)</option>
+            </select>
+
+            <button onclick="convertCurrency()">Конвертировать</button>
+            
+            <p id="result">Результат: </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
