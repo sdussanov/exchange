@@ -16,3 +16,40 @@
             padding: 20px;
             text-align: center;
         }
+
+        .exchange-rates {
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .conversion-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, select, button {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
