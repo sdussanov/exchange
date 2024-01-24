@@ -1,9 +1,18 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    await updateExchangeRate('USD', 'KZT', 'usdRate');
-    await updateExchangeRate('EUR', 'KZT', 'eurRate');
-    await updateExchangeRate('RUB', 'KZT', 'rubRate');
-    await updateExchangeRate('TRY', 'KZT', 'tryRate');
-    await updateExchangeRate('CNY', 'KZT', 'cnyRate');
+    const currencies = ['USD', 'EUR', 'RUB', 'TRY', 'CNY'];
+
+    const updates = currencies.map(curreny=>
+        updateExchangeRate(curreny, 'KZT', `${curreny.toLowerCase()}Rate`)
+        
+        );
+    await Promise.all(updates);
+
+
+    // await updateExchangeRate('USD', 'KZT', 'usdRate');
+    // await updateExchangeRate('EUR', 'KZT', 'eurRate');
+    // await updateExchangeRate('RUB', 'KZT', 'rubRate');
+    // await updateExchangeRate('TRY', 'KZT', 'tryRate');
+    // await updateExchangeRate('CNY', 'KZT', 'cnyRate');
 });
 
 async function getExchangeRate(fromCurrency, toCurrency) {
